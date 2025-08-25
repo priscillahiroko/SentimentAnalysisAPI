@@ -1,0 +1,32 @@
+# .NET
+**/bin/
+**/obj/
+*.user
+*.vs/
+
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# Docker
+.env
+
+# Ambiente Virtual do Python
+.venv/
+venv/
+
+# Arquivos de cache do Python
+__pycache__/
+*.pyc
+
+# Arquivos gerados pelo .NET
+[Bb]in/
+[Oo]bj/
+
+# Configurações do VS Code
+.vscode/
+
+# Arquivos de sistema
+.DS_Store
+Thumbs.db

@@ -1,0 +1,23 @@
+version: '3.8'
+services:
+  api:
+    build:
+      context: ./SentimentAnalysisAPI
+      dockerfile: Dockerfile
+    ports:
+      - "5000:80"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ApiSettings__ApiKey=minha-chave-secreta
+      - SentimentApi__BaseUrl=http://sentiment_service:8000
+    depends_on:
+      - sentiment_service
+
+  sentiment_service:
+    build:
+      context: ./sentiment_service
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - API_KEY=minha-chave-secreta
